@@ -1,0 +1,12 @@
+Description:
+    Creates a new boilerplate for creating a babel transpiled library.
+
+Example:
+    yo mushu
+
+    This will create:
+        gulpfile.js: Configuration for the task runner.
+        package.json: Development packages installed by npm.
+
+        lib/: Your library files.
+        test/: Unit tests for your library.

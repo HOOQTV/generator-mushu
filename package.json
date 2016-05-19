@@ -1,0 +1,21 @@
+{
+  "name": "generator-mushu",
+  "version": "0.1.0",
+  "description": "Transpiled library generator",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "es6",
+    "babel",
+    "transpiled",
+    "sourcemaps",
+    "refelect-r"
+  ],
+  "author": "Dhi Aurrahman <dio@hooq.tv>",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.23.3"
+  }
+}
