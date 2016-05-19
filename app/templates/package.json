@@ -1,5 +1,5 @@
 {
-    "name": "<%= className %>",
+    "name": "<%= filename %>",
     "version": "0.1.0",
     "description": "A <%= className %> library.",
     "main": "build/lib/index.js",

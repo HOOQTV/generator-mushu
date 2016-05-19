@@ -7,7 +7,7 @@ class BaseError extends Error {
 }
 
 /** Wraps <%= className %> errors */
-class NevergentError extends BaseError {
+class <%= className %>Error extends BaseError {
     constructor(message, code, source = '<%= className %>') {
         // Hence we know which place is failing by just reading the message
         super(`${message} (${code} of ${source})`);

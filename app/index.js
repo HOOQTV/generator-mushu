@@ -18,7 +18,9 @@ module.exports = generators.Base.extend({
             message: 'What is your main class name?',
             default: 'Mushu'
         } ]).then((answers) => {
-            this.className = 'Mushu';
+            this.className = answers.className;
+            this.email = this.className.toLowerCase();
+            this.filename = this.className.toLowerCase();
         });
     },
 
@@ -33,28 +35,35 @@ module.exports = generators.Base.extend({
             this.fs.copyTpl(
                 this.templatePath('package.json'),
                 this.destinationPath('package.json'),
-                { className: this.className, email: this.className.toLowerCase() }
+                this
+            );
+        },
+        mushu: function() {
+            this.fs.copyTpl(
+                this.templatePath('mushu.js'),
+                this.destinationPath(`lib/${this.filename}.js`),
+                this
             );
         },
         index: function() {
             this.fs.copyTpl(
                 this.templatePath('index.js'),
                 this.destinationPath('lib/index.js'),
-                { className: this.className }
+                this
             );
         },
         error: function() {
             this.fs.copyTpl(
                 this.templatePath('error.js'),
                 this.destinationPath('lib/error.js'),
-                { className: this.className }
+                this
             );
         },
         test: function() {
             this.fs.copyTpl(
                 this.templatePath('test.js'),
                 this.destinationPath('test/index.js'),
-                { className: this.className }
+                this
             );
         },
         gitignore: function() {
@@ -73,7 +82,7 @@ module.exports = generators.Base.extend({
             this.fs.copyTpl(
                 this.templatePath('README.md'),
                 this.destinationPath('README.md'),
-                { className: this.className }
+                this
             );
         }
     },

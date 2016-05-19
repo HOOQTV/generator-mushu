@@ -1,22 +1,11 @@
-/** @module <%= className %>*/
+/** @module Index */
+import { install } from 'source-map-support'; install();
 
-/** Class representing <%= className %> */
-export default class <%= className %> {
-    /**
-     * Constructs <%= className %>
-     *
-     * @param {String} name - The name.
-     */
-    constructor(name) {
-        this.name = name;
-    }
+import <%= className %> from './<%= filename %>';
+import { <%= className %>Error } from './error.js';
 
-    /**
-     * Says hello.
-     *
-     * return {String} The hello string.
-     */
-    async hello() {
-        return `Hello ${this.name}`;
-    }
-}
+// Exposes main entrypoint to the lib.
+export default <%= className %>;
+
+// Exposes the lib error.
+export { <%= className %>Error };
