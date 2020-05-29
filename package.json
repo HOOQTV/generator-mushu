@@ -19,7 +19,7 @@
   "author": "Dhi Aurrahman <dio@hooq.tv>",
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^0.23.3"
+    "yeoman-generator": "^0.24.1"
   },
   "main": "index.js",
   "repository": {
